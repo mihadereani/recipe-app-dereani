@@ -1,5 +1,5 @@
 asgiref==3.6.0
-backports.zoneinfo==0.2.1
+backports.zoneinfo;python_version<"3.9"
 contourpy==1.0.7
 cycler==0.11.0
 dj-database-url==2.0.0
