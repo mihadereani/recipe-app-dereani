@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RecipeApp | Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
+    <!-- CSS CUSTOM -->
+    <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+    <style type="text/css">
+        body {
+            background: url("{% static 'recipes/images/home_background.jpg' %}") no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <img id="logo" src="{% static 'recipes/images/logo.png' %}" width="150px"> {% comment%} HTML tag for heading
+        {%endcomment%}
+
+        <div class="search_box">
+            <form action="" method="GET" class="form">
+                {% csrf_token %}
+                <input type="text" name="recipe_search" class="form_search_input" id="searchbar"
+                    placeholder="Search Recipes..." onkeyup="search_recipe()" />
+            </form>
+            <br>
+            <div class="search_results" autocomplete="off" style="display: none;">
+                {% for object in object_list %}
+                <p class="recipe_searched">
+                    <a class="recipe_name"
+                        style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
+                        href="{{object.get_absolute_url}}"> {{object.name}} </a>
+                </p>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <a href="{%url 'recipes:search' %}" class="logout_btn">Data V.</a>
+            <a href="{%url 'logout' %}" class="logout_btn">Logout</a>
+        </div>
+    </div>
+
+
+    <div class="recipe_grid">
+        {% for object in object_list %}
+        <div class="grid_item">
+            <h4><a class="recipe_name" href="{{object.get_absolute_url}}"> {{object.name}} </a></h4>
+            <div style="margin-bottom: 10px;">
+                <b>Cooking Time: </b> {{object.cooking_time}} <br>
+                <b>Difficulty: </b> {{object.calculate_difficulty}} <br>
+            </div>
+            <img class="food_images" src="{{object.pic.url}}" />
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- linking javascript -->
+    <script src="{% static 'recipes/js/js.js' %}"></script>
+
+</body>
+
+</html>

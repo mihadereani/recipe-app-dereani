@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RecipeApp | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
+    <!-- CSS CUSTOM -->
+    <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+    <style type="text/css">
+        body {
+            background: url("{% static 'recipes/images/home_background.jpg' %}") no-repeat fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30vh;
+        }
+
+        img {
+            border-radius: 15px;
+        }
+
+        h1,
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(207, 206, 149);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="{% static 'recipes/images/logo.png' %}" width="300px">
+    <h1>Welcome to Recipe App</h1>
+    <h3>Log-in to your account to see our list of recipes</h3>
+    <a href="{%url 'login' %}" class="login_btn"> Login </a>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+.body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.nav-bar {
+  width: 80vw;
+  height: 10vh;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form_search_input,
+.form_search {
+  background-color: beige;
+  height: 14px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 200px;
+  padding: 10px;
+}
+.search_results {
+  background-color: rgb(232, 211, 187);
+  border-radius: 7px;
+  width: 200px;
+  padding: 20px;
+  position: fixed;
+  margin: 0 auto;
+}
+
+#logo {
+  border-radius: 3px;
+}
+.recipe_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 23px 0 23px 23px;
+  grid-gap: 23px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 70vw;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.grid_item {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 40vh;
+  padding: 0 0 15px 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.food_images {
+  width: 250px;
+  height: 160px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.recipe_name {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+}
+.recipe_name:hover {
+  color: rgb(132, 97, 11);
+  transition: 200ms;
+}
+
+.auth_modal {
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 5px 10px 15px;
+  margin: 0 auto;
+  margin-top: 23vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.details_modal {
+  width: 55%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 5px 10px 15px;
+  margin: 0 auto;
+  margin-top: 23vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.details_body {
+  display: flex;
+}
+.details_short,
+.details_long {
+  padding: 8px;
+}
+#error_login {
+  margin: 0 auto;
+  border: 3px solid rgb(243, 0, 0);
+  background-color: rgb(245, 131, 131);
+  padding: 10px;
+  border-radius: 10px;
+}
+.form_input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login_btn,
+.logout_btn,
+.back-home_btn {
+  width: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  background-color: rgb(132, 97, 11);
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.back-home_btn {
+  background-color: rgb(123, 49, 33);
+}
+.login_btn:hover,
+.logout_btn:hover,
+.back-home_btn:hover {
+  filter: brightness(125%);
+  transition: 200ms;
+}
